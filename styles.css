@@ -10,6 +10,7 @@
     --border-color: #ddd;
     --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --github-color: #24292e;
 }
 
 /* Reset and Base Styles */
@@ -108,10 +109,11 @@ header .container {
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin-left: 30px;
+    margin-left: 25px;
 }
 
 nav ul li a {
@@ -371,6 +373,17 @@ nav ul li a:hover {
     color: var(--primary-color);
 }
 
+/* Writing Portfolio Section */
+#writing {
+    background-color: var(--gray-color);
+}
+
+#writing h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
 .project-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -383,6 +396,9 @@ nav ul li a:hover {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -392,6 +408,9 @@ nav ul li a:hover {
 
 .project-info {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-info h3 {
@@ -402,6 +421,36 @@ nav ul li a:hover {
 .project-description {
     margin-bottom: 20px;
     font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+/* Project Links */
+.project-links {
+    margin-top: auto;
+    display: flex;
+    gap: 15px;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: var(--github-color);
+    color: var(--light-color);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.github-link:hover {
+    background-color: #000;
+    color: var(--light-color);
+    transform: translateY(-2px);
+}
+
+.github-link i {
+    font-size: 1.1rem;
 }
 
 /* PDF Viewer */
@@ -460,7 +509,7 @@ nav ul li a:hover {
 
 /* Contact Section */
 #contact {
-    background-color: var(--gray-color);
+    background-color: var(--light-color);
 }
 
 #contact h2 {
@@ -485,7 +534,7 @@ nav ul li a:hover {
     align-items: center;
     gap: 15px;
     padding: 15px;
-    background-color: var(--light-color);
+    background-color: var(--gray-color);
     border-radius: 8px;
     transition: var(--transition);
 }
@@ -554,10 +603,11 @@ footer {
     
     nav ul {
         justify-content: center;
+        flex-wrap: wrap;
     }
     
     nav ul li {
-        margin: 0 10px;
+        margin: 5px 10px;
     }
     
     .hero-content h1 {
