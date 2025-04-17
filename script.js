@@ -17,6 +17,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Phone number anti-bot protection
+    const phoneElement = document.getElementById('phone-number');
+    if (phoneElement) {
+        // Decode phone number only when user interacts with the element
+        phoneElement.addEventListener('click', function() {
+            try {
+                const encoded = this.getAttribute('data-encoded');
+                if (encoded) {
+                    const decoded = atob(encoded);
+                    this.textContent = decoded;
+                    // Remove the event listener after showing the number
+                    this.removeEventListener('click', arguments.callee);
+                    this.style.cursor = 'default';
+                }
+            } catch (error) {
+                console.error('Error decoding phone number:', error);
+            }
+        });
+        
+        // Visual indication that it's clickable
+        phoneElement.style.cursor = 'pointer';
+        phoneElement.style.color = 'var(--primary-color)';
+        phoneElement.title = 'Click to reveal phone number';
+    }
+    
     // PDF Viewer functionality
     const pdfViewer = document.getElementById('pdf-viewer');
     const pdfIframe = document.getElementById('pdf-iframe');
