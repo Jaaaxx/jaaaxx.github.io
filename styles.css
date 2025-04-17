@@ -11,6 +11,18 @@
     --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
     --github-color: #24292e;
+    --tag-bg: #f0f0f0;
+    --tag-c: #649ad2;
+    --tag-assembly: #6E4C13;
+    --tag-java: #b07219;
+    --tag-javascript: #f1e05a;
+    --tag-python: #3572A5;
+    --tag-ruby: #701516;
+    --tag-react: #61dafb;
+    --tag-rails: #CC0000;
+    --tag-ai: #9c88ff;
+    --tag-writing: #20bf6b;
+    --tag-research: #8854d0;
 }
 
 /* Reset and Base Styles */
@@ -422,6 +434,84 @@ nav ul li a:hover {
     margin-bottom: 20px;
     font-size: 0.95rem;
     flex-grow: 1;
+}
+
+/* Project Tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: var(--tag-bg);
+    color: var(--text-color);
+}
+
+.tag-c {
+    background-color: rgba(100, 154, 210, 0.15);
+    color: var(--tag-c);
+    border: 1px solid var(--tag-c);
+}
+
+.tag-assembly {
+    background-color: rgba(110, 76, 19, 0.15);
+    color: var(--tag-assembly);
+    border: 1px solid var(--tag-assembly);
+}
+
+.tag-java {
+    background-color: rgba(176, 114, 25, 0.15);
+    color: var(--tag-java);
+    border: 1px solid var(--tag-java);
+}
+
+.tag-javascript {
+    background-color: rgba(241, 224, 90, 0.15);
+    color: #5d5211;
+    border: 1px solid var(--tag-javascript);
+}
+
+.tag-python {
+    background-color: rgba(53, 114, 165, 0.15);
+    color: var(--tag-python);
+    border: 1px solid var(--tag-python);
+}
+
+.tag-ruby {
+    background-color: rgba(112, 21, 22, 0.15);
+    color: var(--tag-ruby);
+    border: 1px solid var(--tag-ruby);
+}
+
+.tag-system {
+    background-color: rgba(112, 21, 22, 0.15);
+    color: var(--tag-ruby);
+    border: 1px solid var(--tag-ruby);
+}
+
+.tag-ai {
+    background-color: rgba(156, 136, 255, 0.15);
+    color: var(--tag-ai);
+    border: 1px solid var(--tag-ai);
+}
+
+.tag-research {
+    background-color: rgba(136, 84, 208, 0.15);
+    color: var(--tag-research);
+    border: 1px solid var(--tag-research);
+}
+
+.tag-writing {
+    background-color: rgba(32, 191, 107, 0.15);
+    color: var(--tag-writing);
+    border: 1px solid var(--tag-writing);
 }
 
 /* Project Links */
